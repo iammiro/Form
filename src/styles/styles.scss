@@ -1,0 +1,451 @@
+body {
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+}
+
+h1 {
+  color: #444444;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: -1px;
+  margin-bottom: 31px;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  .form-wrapper {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+  .inputs-block-wrapper {
+    position: relative;
+    margin-right: 26px;
+  }
+  .form-block-item {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 20px 0;
+  }
+  .input-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+  }
+  .form-header {
+    color: #444444;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 125px;
+    text-align: right;
+    margin-right: 11px;
+  }
+  .exp-date-wrapper {
+    flex-direction: row;
+    display: flex;
+    .cvv-code-help-block {
+      display: none;
+      width: 287px;
+      height: 182px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      border: 1px solid #cccccc;
+      background-color: #ffffff;
+      //display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: -179px;
+      z-index: 99;
+      left: -91px;
+      .visa-help {
+        padding: 0 10px;
+        border-right: 1px solid lightgray;
+      }
+      .am-exp-help {
+        padding: 0 10px;
+      }
+      .text-bold {
+        width: 108px;
+        height: 48px;
+        color: #444444;
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 700;
+      }
+      .text-regular {
+        width: 108px;
+        height: 48px;
+        color: #444444;
+        font-size: 12px;
+        line-height: 16px;
+      }
+      &:after {
+        position: absolute;
+        content: "";
+        width: 0px;
+        height: 0px;
+        border-top: 10px solid #fff;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid transparent;
+        top: 182px;
+        right: 27px;
+        z-index: 99;
+      }
+      &:before {
+        position: absolute;
+        content: "";
+        width: 0px;
+        height: 0px;
+        border-top: 11px solid #cccccc;
+        border-right: 11px solid transparent;
+        border-bottom: 11px solid transparent;
+        border-left: 11px solid transparent;
+        top: 182px;
+        right: 26px;
+      }
+    }
+  }
+  .cvv-header {
+    width: 72px;
+  }
+  input[type='text'], input[type='number'], select {
+    height: 28px;
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+    margin: 0 5px;
+    width: 162px;
+  }
+  select {
+    height: 32px;
+  }
+  input[type='text']::placeholder, input[type='number']::placeholder, select {
+    color: #888888;
+    font-size: 14px;
+    padding-left: 10px;
+  }
+  .exp-date-wrapper {
+    position: relative;
+    .month {
+      width: 64px;
+    }
+    .delimiter {
+      margin: 7px 2px 0 2px;
+    }
+    .year {
+      width: 77px;
+    }
+    .cvv-code {
+      width: 85px;
+    }
+    .question-mark {
+      position: absolute;
+      top: 10px;
+      left: 71px;
+      cursor: pointer;
+    }
+  }
+  .submit-wrapper {
+    justify-content: flex-end;
+    padding-right: 10px;
+    position: absolute;
+    top: 209px;
+    right: 366px;
+  }
+  .submit {
+    width: 339px;
+    height: 42px;
+    border-radius: 3px;
+    border: 1px solid #fd7722;
+    background-color: #ff9000;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .cards-wrapper {
+    width: 162px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 54px;
+    left: 319px;
+  }
+  .pay-pal-block {
+    width: 343px;
+    height: 250px;
+    border-radius: 3px;
+    border: 1px solid #dddddd;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    span {
+      color: #444444;
+      font-size: 18px;
+      margin: 47px 0 30px 0;
+    }
+  }
+}
+
+input[type='text'].error, input[type='number'].error, select.error {
+  border: 1px solid #ef5350;
+}
+
+label.error {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12);
+  border: 1px solid #ef5350;
+  background-color: #ffebee;
+  color: #ef5350;
+  font-size: 13px;
+  line-height: 17px;
+  width: 200px;
+  height: 32px;
+  top: 10px;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  &:after {
+    position: absolute;
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-top: 10px solid #ffebee;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+    top: 32px;
+    right: 90px;
+    z-index: 99;
+  }
+  &:before {
+    position: absolute;
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-top: 11px solid red;
+    border-right: 11px solid transparent;
+    border-bottom: 11px solid transparent;
+    border-left: 11px solid transparent;
+    top: 32px;
+    right: 89px;
+  }
+}
+
+#cvvCode-error {
+  top: -31px;
+  left: -54px;
+}
+
+#zipCode-error {
+  top: 127px;
+  left: 123px;
+}
+
+#surname-error {
+  top: -31px;
+  left: 156px;
+}
+
+#name-error {
+  top: -31px;
+  left: -11px;
+}
+
+#cardNumber-error {
+  top: -31px;
+  left: -16px;
+}
+
+#expireYYYY-error {
+  top: -31px;
+  left: 23px;
+}
+
+#expireMM-error {
+  top: -31px;
+  left: -62px;
+}
+
+@media only screen and (max-width: 835px) {
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .form-wrapper {
+      position: unset;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .inputs-block-wrapper {
+      order: 1;
+      width: 480px;
+      display: flex;
+      flex-direction: column;
+      margin-right: 13px;
+    }
+    .submit-wrapper {
+      width: 480px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+      margin: 17px 0;
+    }
+    .pay-pal-block-wrapper {
+      width: 480px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+      order: 2;
+    }
+    .pay-pal-block {
+      width: 339px;
+      height: 68px;
+      border-radius: 3px;
+      border: 1px solid #dddddd;
+      background-color: #f7f7f7;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      order: 2;
+      margin-right: 3px;
+      input {
+        width: 100px;
+        height: 38px;
+      }
+      span {
+        font-size: 18px;
+        margin: -4px 20px 0 0;
+      }
+    }
+    .submit-wrapper {
+      order: 3;
+      position: unset;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 23px;
+
+  }
+  .form {
+    .form-wrapper {
+      width: calc(100% - 10px);
+    }
+    .form-header {
+      text-align: left;
+    }
+    .inputs-block-wrapper {
+      display: flex;
+      flex-direction: column;
+      .cards-wrapper {
+        order: -1;
+        width: 100%;
+        position: unset;
+        justify-content: space-evenly;
+        margin-bottom: 10px;
+      }
+    }
+    .form-block-item {
+      flex-direction: column;
+      margin: 0 0 3px 0;
+    }
+    .exp-date-wrapper {
+      flex-direction: row;
+      display: flex;
+      .cvv-code-help-block {
+        top: -148px;
+        z-index: 99;
+        left: -174px;
+      }
+    }
+    .input-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      position: relative;
+    }
+    .inputs-block-wrapper {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 17px;
+    }
+    .submit-wrapper {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      .submit {
+        width: 100%;
+      }
+    }
+    .cvv-header {
+      width: 93px;
+    }
+    .exp-date-wrapper .cvv-code {
+      width: 102px;
+    }
+    .pay-pal-block-wrapper {
+      width: 100%;
+      margin-bottom: 19px;
+      .pay-pal-block {
+        width: 100%;
+        margin: 0;
+        height: 60px;
+        span {
+          margin: -4px 0px 0 5px;
+        }
+      }
+    }
+    input[type='text'], input[type='number'] {
+      width: 135px;
+      margin: 0;
+    }
+    input[type='text'].name, input[type='text'].surname {
+      width: 48%;
+    }
+    input[type='text'].card-number, input[type='text'].zip-code {
+      width: 100%;
+    }
+    select {
+      margin: 0;
+    }
+    .exp-date-block {
+      flex-direction: row;
+      display: flex;
+      justify-content: space-between;
+      .exp-date-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        .delimiter {
+          margin: 5px 10px 0 10px;
+        }
+      }
+    }
+  }
+  #zipCode-error {
+    top: 247px;
+    left: 63px;
+  }
+}

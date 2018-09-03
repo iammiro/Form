@@ -1,0 +1,85 @@
+doctype html
+html(lang='ru')
+    head
+        title Test form
+        link(rel='stylesheet', href='/styles/styles.css')
+        script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
+        script(src="//cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js")
+        script(src='/scripts/main.js')
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+    body
+        div.container
+            h1 Thank you for choosing to subscribe to PDFfiller services!
+            form#form.form(name='form')
+                div.form-wrapper
+                    div.inputs-block-wrapper
+                        div.form-block-item.name-block
+                            div.input-header-wrapper
+                                span.form-header Cardhoder Name
+                            div.input-wrapper
+                                input(type='text' placeholder='Cardhoder Name' name='name' required).name
+                                input(type='text' placeholder='Last Name' name='surname' required).surname
+                        div.form-block-item.card-number-block
+                            div.input-header-wrapper
+                                span.form-header Card Number
+                            div.input-wrapper
+                                input(type='text' name='cardNumber' required).card-number
+                        div.cards-wrapper.cards-block
+                            span.card
+                                img(src="images/visa.svg" alt="")
+                            span.card
+                                img(src="images/mastercard.svg" alt="")
+                            span.card
+                                img(src="images/discover.svg" alt="")
+                            span.card
+                                img(src="images/amexp.svg" alt="")
+                        div.form-block-item.exp-date-block
+                            div.exp-date-wrapper
+                                div.input-header-wrapper
+                                    span.form-header Exp. Date
+                                div.input-wrapper
+                                    select(name='expireDateMM' id='expireMM').month
+                                        option(value='')
+                                        option(value='1') 1
+                                        option(value='2') 2
+                                        option(value='3') 3
+                                        option(value='4') 4
+                                        option(value='5') 5
+                                        option(value='6') 6
+                                        option(value='7') 7
+                                        option(value='8') 8
+                                        option(value='9') 9
+                                        option(value='10') 10
+                                        option(value='11') 11
+                                        option(value='12') 12
+                                    span.delimiter /
+                                    select(name='expireDateYYYY' id='expireYYYY').year
+                                        option(value='')
+                                        option(value='2018') 2018
+                                        option(value='2019') 2019
+                                        option(value='2020') 2020
+                                        option(value='2021') 2021
+                            div.exp-date-wrapper
+                                div.cvv-code-help-block#cvv-code-help-block
+                                    div.visa-help
+                                        img(src='images/visa-big.png')
+                                        span.text-bold Visa, MasterCard
+                                        span.text-regular 3-Digit Verification Number
+                                    div.am-exp-help
+                                        img(src='images/am-exp-big.png')
+                                        span.text-bold American Express
+                                        span.text-regular 4-Digit Verification Number
+                                div.input-header-wrapper
+                                    span.form-header.cvv-header CVV/CVC
+                                div.input-wrapper
+                                    input(type='text' placeholder='XXXX' name='cvvCode' required).cvv-code
+                                    img(src='images/question-mark.svg').question-mark
+                        div.form-block-item.zip-code-block
+                            span.form-header Zip/Postal Code
+                            input(type='text' name='zipCode' required).zip-code
+                    div.form-block-item.submit-wrapper
+                        input.submit(type='submit' value='Start My Subscription for $19.99/mo.')
+                    div.pay-pal-block-wrapper
+                        div.pay-pal-block
+                            span Or pay with Paypal
+                            input(type='image' src='images/paypal.png')
