@@ -1,5 +1,5 @@
 $(function () {
-  $("form[name='form']").validate({
+  var validator = $("form[name='form']").validate({
     onfocusout: false,
     showErrors: function (errorMap, errorList) {
       if (errorList.length) {
@@ -61,6 +61,9 @@ $(function () {
     submitHandler: function (form) {
       form.submit();
     }
+  });
+  $(document).click(function () {
+    validator.resetForm();
   });
 });
 

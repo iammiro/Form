@@ -1,7 +1,7 @@
 "use strict";
 
 $(function () {
-  $("form[name='form']").validate({
+  var validator = $("form[name='form']").validate({
     onfocusout: false,
     showErrors: function showErrors(errorMap, errorList) {
       if (errorList.length) {
@@ -63,6 +63,9 @@ $(function () {
     submitHandler: function submitHandler(form) {
       form.submit();
     }
+  });
+  $(document).click(function () {
+    validator.resetForm();
   });
 });
 
