@@ -416,6 +416,10 @@ label.error {
         span {
           margin: -4px 0px 0 5px;
         }
+        a, img {
+          width: 100px;
+          height: 38px;
+        }
       }
     }
     input[type='text'], input[type='number'] {

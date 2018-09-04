@@ -1,6 +1,15 @@
 $(function () {
   $("form[name='form']").validate({
-    focusCleanup: true,
+    onfocusout: false,
+    showErrors: function (errorMap, errorList) {
+      if (errorList.length) {
+        var s = errorList.shift();
+        var n = [];
+        n.push(s);
+        this.errorList = n;
+      }
+      this.defaultShowErrors();
+    },
     rules: {
       name: "required",
       surname: "required",
@@ -66,5 +75,4 @@ $(document).ready(function () {
       subject.fadeOut();
     }
   });
-
 });

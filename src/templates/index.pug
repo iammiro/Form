@@ -10,7 +10,7 @@ html(lang='ru')
     body
         div.container
             h1 Thank you for choosing to subscribe to PDFfiller services!
-            form#form.form(name='form')
+            form#form.form(name='form' method="get" action="")
                 div.form-wrapper
                     div.inputs-block-wrapper
                         div.form-block-item.name-block
@@ -82,4 +82,5 @@ html(lang='ru')
                     div.pay-pal-block-wrapper
                         div.pay-pal-block
                             span Or pay with Paypal
-                            input(type='image' src='images/paypal.png')
+                            a(href='/')
+                                img(src='images/paypal.png' alt='pay-pal')

@@ -415,6 +415,9 @@ label.error {
       height: 60px; }
       .form .pay-pal-block-wrapper .pay-pal-block span {
         margin: -4px 0px 0 5px; }
+      .form .pay-pal-block-wrapper .pay-pal-block a, .form .pay-pal-block-wrapper .pay-pal-block img {
+        width: 100px;
+        height: 38px; }
   .form input[type='text'], .form input[type='number'] {
     width: 135px;
     margin: 0; }
