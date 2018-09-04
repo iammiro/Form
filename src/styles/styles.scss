@@ -55,7 +55,6 @@ h1 {
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       border: 1px solid #cccccc;
       background-color: #ffffff;
-      //display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
@@ -219,6 +218,7 @@ label.error {
   justify-content: center;
   align-items: center;
   border-radius: 3px;
+  z-index: 99;
   &:after {
     position: absolute;
     content: "";
@@ -243,6 +243,10 @@ label.error {
     border-left: 11px solid transparent;
     top: 32px;
     right: 89px;
+  }
+  #cvvCode-error {
+    top: -31px;
+    left: -87px;
   }
 }
 
@@ -451,5 +455,20 @@ label.error {
   #zipCode-error {
     top: 247px;
     left: 63px;
+  }
+  #surname-error {
+    left: 100px;
+  }
+  #expireMM-error {
+    left: -10px;
+    &:after {
+      right: 150px;
+    }
+    &:before {
+      right: 149px;
+    }
+  }
+  #cvvCode-error {
+    left: -87px;
   }
 }

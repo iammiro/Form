@@ -220,7 +220,8 @@ label.error {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
-  border-radius: 3px; }
+  border-radius: 3px;
+  z-index: 99; }
   label.error:after {
     position: absolute;
     content: "";
@@ -244,6 +245,9 @@ label.error {
     border-left: 11px solid transparent;
     top: 32px;
     right: 89px; }
+  label.error #cvvCode-error {
+    top: -31px;
+    left: -87px; }
 
 #cvvCode-error {
   top: -31px;
@@ -443,4 +447,14 @@ label.error {
         margin: 5px 10px 0 10px; }
   #zipCode-error {
     top: 247px;
-    left: 63px; } }
+    left: 63px; }
+  #surname-error {
+    left: 100px; }
+  #expireMM-error {
+    left: -10px; }
+    #expireMM-error:after {
+      right: 150px; }
+    #expireMM-error:before {
+      right: 149px; }
+  #cvvCode-error {
+    left: -87px; } }
